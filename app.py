@@ -10,12 +10,14 @@ import smtplib
 from datetime import datetime
 
 # Configuration
-PEXELS_API_KEY = "9qgh0LfqC9Xtd2680FV7tlGBm5ov4NnhkVi7jtjIlE7SSd5a1ymRYOFG"
-OPENROUTER_API_KEY = "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"
-GMAIL_ADDRESS = "nitinshukla7955@gmail.com"
-GMAIL_APP_PASSWORD = "cmlw bkna meft yyey"
-RECIPIENT_EMAIL = "nitinshuka7945@gmail.com"
+import streamlit as st
 
+# Load from secrets.toml
+OPENROUTER_API_KEY = st.secrets["OPENROUTER_API_KEY"]
+PEXELS_API_KEY = st.secrets["PEXELS_API_KEY"]
+GMAIL_ADDRESS = st.secrets["GMAIL_ADDRESS"]
+GMAIL_APP_PASSWORD = st.secrets["GMAIL_APP_PASSWORD"]
+RECIPIENT_EMAIL = st.secrets["RECIPIENT_EMAIL"]
 BANGALORE_LOCATIONS = [
     "Koramangala", "Whitefield", "Indiranagar", "Jayanagar", "HSR Layout",
     "Electronic City", "Sarjapur Road", "Hebbal", "Yelahanka", "Bellandur"
